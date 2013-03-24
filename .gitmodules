@@ -1,6 +1,0 @@
-[submodule "rickshaw"]
-	path = rickshaw
-	url = git@github.com:myles2007/rickshaw.git
-[submodule "dropzone"]
-	path = dropzone
-	url = https://github.com/myles2007/dropzone.git
