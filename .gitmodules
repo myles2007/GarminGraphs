@@ -1,0 +1,6 @@
+[submodule "Graphs/rickshaw"]
+	path = Graphs/rickshaw
+	url = https://github.com/myles2007/rickshaw
+[submodule "Graphs/dropzone"]
+	path = Graphs/dropzone
+	url = https://github.com/myles2007/dropzone.git
