@@ -1,5 +1,6 @@
 from Graphs import app
+import flask
 
 @app.route('/')
 def index():
-    return "Hello World!"
+    return flask.render_template('index.html')
