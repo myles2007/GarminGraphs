@@ -181,14 +181,14 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #ffffff;
+@navbarBackgroundHighlight:       @orange;
 @navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
-@navbarText:                      #777;
-@navbarLinkColor:                 #777;
-@navbarLinkColorHover:            @grayDark;
-@navbarLinkColorActive:           @gray;
+@navbarText:                      #ffffff;
+@navbarLinkColor:                 @navbarText;
+@navbarLinkColorHover:            darken(@navbarText, 15%);
+@navbarLinkColorActive:           @navbarText;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
 
