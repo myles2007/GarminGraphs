@@ -6112,6 +6112,11 @@ body {
   margin-bottom: 5px;
   background: gainsboro;
 }
+#chart {
+  width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*!
  * Bootstrap Responsive v2.3.1
  *
