@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="activity-container span12">
+            <form action="/file-upload" class="dropzone">
+                <div class="fallback">
+                    <input name="file" type="file" multiple />
+                </div>
+            </form>
+            <div class='simple-divider light'></div>
+        </div>
+    </div>
+    <div class="row">
+        <div id='chart' class="span12 graph-container"> </div>
+    </div>
+
+    </div>
+</div>
+{% endblock content %}
+
+{% block javascript %}
+    <script src="/static/js/dropzone/lib/dropzone.js"></script>
+    <script src="/static/js/rickshaw/vendor/d3.min.js"></script> 
+    <script src="/static/js/rickshaw/vendor/d3.layout.min.js"></script> 
+    <script src="/static/js/rickshaw/rickshaw.min.js"></script> 
+    <script>
+    var graph = new Rickshaw.Graph( {
+        element: document.querySelector("#chart"), 
+        width: 600, 
+        height: 250, 
+        renderer: 'area',
+        stroke: true,
+        series: [{
+            stroke: 'purple',
+            color: 'rgba(128, 0, 128, .55)',
+            data: [ 
+                { x: 0, y: 40 }, 
+                { x: 1, y: 49 }, 
+                { x: 2, y: 38 }, 
+                { x: 3, y: 30 }, 
+                { x: 4, y: 32 } ]
+        }]
+    });
+    graph.render();
+    </script> 
+ 
+{% endblock javascript %}
+
