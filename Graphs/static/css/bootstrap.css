@@ -6059,6 +6059,24 @@ a.badge:focus {
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
+.navbar .btn-navbar {
+  background-image: url('/static/imgs/navbar_back.png');
+  border: 1px solid #995307;
+}
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:focus {
+  background-position: 0px 0px;
+  background-image: url('/static/imgs/navbar_back_active.png');
+  border: 1px solid #995307;
+}
+.nav-collapse .nav > li > a:hover {
+  background-color: #995307;
+  background-image: url('/static/imgs/navbar_back_active.png');
+}
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+  border: solid 2px #995307;
+}
 .navbar-inner {
   background-image: url('/static/imgs/navbar_back.png');
 }
@@ -6069,11 +6087,12 @@ a.badge:focus {
 }
 body {
   min-width: 700px;
-  padding-top: 45px;
+  padding-top: 65px;
   background-image: url('/static/imgs/body_back.png');
 }
 .activity-container {
   background-color: white;
+  min-width: 600px;
   padding: 10px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -6113,7 +6132,7 @@ body {
   background: gainsboro;
 }
 #chart {
-  width: 580px;
+  width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
