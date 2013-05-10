@@ -1,0 +1,103 @@
+@chartWidth: 600px;
+@navBorder: rgb(153, 83, 7);
+@navBack: url('/static/imgs/navbar_back.png');
+@navBackActive: url('/static/imgs/navbar_back_active.png');
+@bodyBack: url('/static/imgs/body_back.png');
+
+.navbar .btn-navbar {
+    background-image: @navBack;
+    border: 1px solid @navBorder;
+}
+
+.navbar-inner .brand,
+.navbar-inner .nav > li > a {
+    text-shadow: 1px 2px @navBorder;
+}
+
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:focus {
+    background-position: 0px 0px;
+    background-image: @navBackActive;
+    border: 1px solid @navBorder;
+}
+
+.nav-collapse .nav > li > a:hover {
+    background-color: @navBorder;
+    background-image: @navBackActive;
+}
+
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+    border: solid 2px rgb(153, 83, 7);
+}
+
+.navbar-inner {
+    background-image: @navBack;
+}
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+    background-image: @navBackActive;
+}
+
+body { min-width: @chartWidth + 100;
+    padding-top: 65px;
+    background-image: @bodyBack;
+}
+
+.activity-container {
+    background-color: white;
+    min-width: @chartWidth;
+    padding: 10px;
+    .border-radius(8px);
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    border: outset 1px orange;
+}
+
+.graph-container {
+    background-color: white;
+    min-width: @chartWidth;
+    padding: 50px;
+    .border-radius(8px);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    border: outset 1px orange;
+}
+
+
+.graph-container > svg {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.simple-divider {
+    width: 100%;
+    height: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.simple-divider.light
+{
+    .simple-divider;
+    background: gainsboro;
+}
+
+#chart {
+    width: @chartWidth;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Works in most modern browsers, and that'll be good enough. */
+    box-shadow: 1px 3px 40px black, -1px -3px 40px black;
+
+
+}
+
+
