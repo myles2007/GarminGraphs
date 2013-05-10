@@ -6063,6 +6063,10 @@ a.badge:focus {
   background-image: url('/static/imgs/navbar_back.png');
   border: 1px solid #995307;
 }
+.navbar-inner .brand,
+.navbar-inner .nav > li > a {
+  text-shadow: 1px 2px #995307;
+}
 .navbar .btn-navbar:hover,
 .navbar .btn-navbar:focus {
   background-position: 0px 0px;
@@ -6094,9 +6098,9 @@ body {
   background-color: white;
   min-width: 600px;
   padding: 10px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
   margin-bottom: 10px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6106,9 +6110,9 @@ body {
   background-color: white;
   min-width: 600px;
   padding: 50px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   border: outset 1px orange;
@@ -6135,6 +6139,9 @@ body {
   width: 600px;
   margin-left: auto;
   margin-right: auto;
+  /* Works in most modern browsers, and that'll be good enough. */
+
+  box-shadow: 1px 3px 40px #000000, -1px -3px 40px #000000;
 }
 /*!
  * Bootstrap Responsive v2.3.1

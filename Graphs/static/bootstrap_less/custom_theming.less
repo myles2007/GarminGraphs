@@ -9,6 +9,11 @@
     border: 1px solid @navBorder;
 }
 
+.navbar-inner .brand,
+.navbar-inner .nav > li > a {
+    text-shadow: 1px 2px @navBorder;
+}
+
 .navbar .btn-navbar:hover,
 .navbar .btn-navbar:focus {
     background-position: 0px 0px;
@@ -36,8 +41,7 @@
     background-image: @navBackActive;
 }
 
-body {
-    min-width: @chartWidth + 100;
+body { min-width: @chartWidth + 100;
     padding-top: 65px;
     background-image: @bodyBack;
 }
@@ -46,7 +50,7 @@ body {
     background-color: white;
     min-width: @chartWidth;
     padding: 10px;
-    .border-radius(3px);
+    .border-radius(8px);
     margin-bottom: 10px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -58,7 +62,7 @@ body {
     background-color: white;
     min-width: @chartWidth;
     padding: 50px;
-    .border-radius(3px);
+    .border-radius(8px);
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 
@@ -89,6 +93,10 @@ body {
     width: @chartWidth;
     margin-left: auto;
     margin-right: auto;
+
+    /* Works in most modern browsers, and that'll be good enough. */
+    box-shadow: 1px 3px 40px black, -1px -3px 40px black;
+
 
 }
 
