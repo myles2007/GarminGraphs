@@ -4,6 +4,11 @@
 @navBackActive: url('/static/imgs/navbar_back_active.png');
 @bodyBack: url('/static/imgs/body_back.png');
 
+@uploadItWidth: 600px;
+@uploadItHeight: 300px;
+@uploadIt: url('/static/imgs/upload_it.png');
+@uploadBackColor: rgb(200, 200, 200);
+
 .navbar .btn-navbar {
     background-image: @navBack;
     border: 1px solid @navBorder;
@@ -41,32 +46,33 @@
     background-image: @navBackActive;
 }
 
-body { min-width: @chartWidth + 100;
+body {
+    min-width: @chartWidth + 100;
     padding-top: 65px;
-    background-image: @bodyBack;
+    /* background-image: @bodyBack; */
 }
 
-.activity-container {
-    background-color: white;
-    min-width: @chartWidth;
-    padding: 10px;
-    .border-radius(8px);
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
+/* .activity-container { */
+    /* background-color: white; */
+    /* [> min-width: @chartWidth; <] */
+    /* padding: 10px; */
+    /* .border-radius(8px); */
+    /* box-sizing: border-box; */
+    /* -moz-box-sizing: border-box; */
 
-    border: outset 1px orange;
-}
+    /* border: outset 1px orange; */
+/* } */
 
 .graph-container {
     background-color: white;
     min-width: @chartWidth;
-    padding: 50px;
+    /* padding: 50px; */
     .border-radius(8px);
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    /* box-sizing: border-box; */
+    /* -moz-box-sizing: border-box; */
+    /* margin-bottom: 30px; */
 
-    border: outset 1px orange;
+    border: inset 1px orange;
 }
 
 
@@ -77,7 +83,10 @@ body { min-width: @chartWidth + 100;
 }
 
 .simple-divider {
-    width: 100%;
+    /* width: 100%; */
+    float: None;
+    margin-left: auto;
+    margin-right: auto;
     height: 1px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -89,15 +98,46 @@ body { min-width: @chartWidth + 100;
     background: gainsboro;
 }
 
+
 #chart {
     width: @chartWidth;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
 
     /* Works in most modern browsers, and that'll be good enough. */
     box-shadow: 1px 3px 40px black, -1px -3px 40px black;
 
+}
 
+.upload-container {
+    border-top: 1px solid orange;
+    background-color: @uploadBackColor;
+    .border-bottom-left-radius(8px);
+    .border-bottom-right-radius(8px);
+}
+
+.dropzone.upload_it {
+    background-image: @uploadIt;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35em;
+    box-sizing: inherit;
+    border: None;
+    background-color: inherit;
+    padding: 0px;
+    /* width: @uploadItWidth; */
+    /* height: @uploadItHeight; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+
+.dropzone.dropzone-previews {
+    .dropzone.upload_it;
+    background-image: None;
+    overflow: scroll;
+    max-height: 360px;
 }
 
 

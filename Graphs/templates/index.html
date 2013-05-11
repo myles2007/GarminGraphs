@@ -2,35 +2,37 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="activity-container span12">
-            <form action="/file-upload" class="dropzone">
-                <div class="fallback">
-                    <input name="file" type="file" multiple />
-                </div>
-            </form>
-            <div class='simple-divider light'></div>
-        </div>
-    </div>
-    <div class="row">
         <div class="span12 graph-container">
-            <div>
-                <div id='chart'></div>
+            <div class='row'>
+                <div class='span12'>
+                    <div id='chart'></div>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='span12 upload-container'>
+                    <div class='row'>
+                        <div id="uploader" class="span6 dropzone upload_it"></div>
+                        <div class='dropzone dropzone-previews span6'></div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
     </div>
 </div>
 {% endblock content %}
 
 {% block javascript %}
-    <script src="/static/js/dropzone/lib/dropzone.js"></script>
+    <script src="/static/js/dropzone.js"></script>
     <script src="/static/js/rickshaw/vendor/d3.min.js"></script> 
     <script src="/static/js/rickshaw/vendor/d3.layout.min.js"></script> 
     <script src="/static/js/rickshaw/rickshaw.min.js"></script> 
 
     <link rel="stylesheet" href="/static/css/rickshaw/rickshaw.css">
+    <link rel="stylesheet" href="/static/css/dropzone/dropzone.css">
     <script>
+        //var upload_it = $('.upload_it').slideUp(10000);
+        var myDropzone = new Dropzone("#uploader", { url: "/file/post",
+                                                     previewsContainer: '.dropzone-previews'});
 
         var data = [ { x: 1910, y: 92228531 }, { x: 1920, y: 106021568 }, { x: 1930, y: 123202660 }, { x: 1940, y: 132165129 }, { x: 1950, y: 151325798 }, { x: 1960, y: 179323175 }, { x: 1970, y: 203211926 }, { x: 1980, y: 226545805 }, { x: 1990, y: 248709873 }, { x: 2000, y: 281421906 }, { x: 2010, y: 308745538 } ];
 
