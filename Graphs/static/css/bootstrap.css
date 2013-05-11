@@ -6092,30 +6092,33 @@ a.badge:focus {
 body {
   min-width: 700px;
   padding-top: 65px;
-  background-image: url('/static/imgs/body_back.png');
+  /* background-image: @bodyBack; */
+
 }
-.activity-container {
-  background-color: white;
-  min-width: 600px;
-  padding: 10px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  border: outset 1px orange;
-}
+/* .activity-container { */
+/* background-color: white; */
+/* [> min-width: @chartWidth; <] */
+/* padding: 10px; */
+/* .border-radius(8px); */
+/* box-sizing: border-box; */
+/* -moz-box-sizing: border-box; */
+/* border: outset 1px orange; */
+/* } */
 .graph-container {
   background-color: white;
   min-width: 600px;
-  padding: 50px;
+  /* padding: 50px; */
+
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  border: outset 1px orange;
+  /* box-sizing: border-box; */
+
+  /* -moz-box-sizing: border-box; */
+
+  /* margin-bottom: 30px; */
+
+  border: inset 1px orange;
 }
 .graph-container > svg {
   margin-left: auto;
@@ -6123,13 +6126,21 @@ body {
   display: block;
 }
 .simple-divider {
-  width: 100%;
+  /* width: 100%; */
+
+  float: None;
+  margin-left: auto;
+  margin-right: auto;
   height: 1px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 .simple-divider.light {
-  width: 100%;
+  /* width: 100%; */
+
+  float: None;
+  margin-left: auto;
+  margin-right: auto;
   height: 1px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -6139,9 +6150,60 @@ body {
   width: 600px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
+  margin-top: 40px;
   /* Works in most modern browsers, and that'll be good enough. */
 
   box-shadow: 1px 3px 40px #000000, -1px -3px 40px #000000;
+}
+.upload-container {
+  border-top: 1px solid orange;
+  background-color: #c8c8c8;
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  border-bottom-right-radius: 8px;
+}
+.dropzone.upload_it {
+  background-image: url('/static/imgs/upload_it.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 35em;
+  box-sizing: inherit;
+  border: None;
+  background-color: inherit;
+  padding: 0px;
+  /* width: @uploadItWidth; */
+
+  /* height: @uploadItHeight; */
+
+  /* margin-left: auto; */
+
+  /* margin-right: auto; */
+
+}
+.dropzone.dropzone-previews {
+  background-image: url('/static/imgs/upload_it.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 35em;
+  box-sizing: inherit;
+  border: None;
+  background-color: inherit;
+  padding: 0px;
+  /* width: @uploadItWidth; */
+
+  /* height: @uploadItHeight; */
+
+  /* margin-left: auto; */
+
+  /* margin-right: auto; */
+
+  background-image: None;
+  overflow: scroll;
+  max-height: 360px;
 }
 /*!
  * Bootstrap Responsive v2.3.1
