@@ -17,8 +17,8 @@ def upload_file():
         if file_ and allowed_file(file_.filename):
             filename = werkzeug.secure_filename(file_.filename)
             file_.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return '<div> Success! </div>'
+            return flask.make_response('<div> Success! </div>', 201)
     return '<div> ??? </div'
 
 def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']

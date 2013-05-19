@@ -1,7 +1,7 @@
 from flask import Flask
 
 DEBUG = True
-UPLOAD_FOLDER = '/Users/mylesloffler/GarminGraphs/Graphs/activities/'
+UPLOAD_FOLDER = '/home/myles/Projects/GarminGraphs/Graphs/activities/'
 ALLOWED_EXTENSIONS = set(['gpx', 'pdf', 'png', 'jpg'])
 
 app = Flask(__name__)

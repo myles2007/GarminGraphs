@@ -4,3 +4,6 @@
 [submodule "Graphs/dropzone"]
 	path = Graphs/dropzone
 	url = https://github.com/myles2007/dropzone.git
+[submodule "Graphs/slimScroll"]
+	path = Graphs/slimScroll
+	url = https://github.com/myles2007/jQuery-slimScroll.git
